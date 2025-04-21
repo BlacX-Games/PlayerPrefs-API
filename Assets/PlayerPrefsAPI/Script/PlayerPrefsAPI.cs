@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Games
+namespace BlacXGames
 {
     public class PlayerPrefsAPI
     {
