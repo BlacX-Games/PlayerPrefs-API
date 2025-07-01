@@ -5,7 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEditor;
 
-namespace BlacXGames.Persistence.PlayerPrefs.Editor
+namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
 {
     public class PlayerPrefsEditorWindow : EditorWindow
     {
