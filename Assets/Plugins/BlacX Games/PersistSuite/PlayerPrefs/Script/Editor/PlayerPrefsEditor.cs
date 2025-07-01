@@ -5,7 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEditor;
 
-namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
+namespace BlacXGames.PersistSuite.Editor
 {
     public class PlayerPrefsEditorWindow : EditorWindow
     {
@@ -19,7 +19,7 @@ namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
         private GUIStyle subHeaderStyle;
         private GUIStyle valueChangedStyle;
 
-        [MenuItem("Tools/BlacX Games/PlayerPrefs Editor")]
+        [MenuItem("Tools/BlacX Games/PersistSuite/PlayerPrefs Editor")]
         public static void ShowWindow()
         {
             GetWindow<PlayerPrefsEditorWindow>("PlayerPrefs Editor");
@@ -438,7 +438,7 @@ namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
         private PropertyInfo GetPlayerPrefsProperty(string category, string key)
         {
             // Get the nested class type for the category
-            Type categoryType = typeof(PlayerPrefsAPI).GetNestedType(category, BindingFlags.Public | BindingFlags.Static);
+            Type categoryType = typeof(PrefsEngine).GetNestedType(category, BindingFlags.Public | BindingFlags.Static);
             if (categoryType == null) return null;
             
             // Get all properties in the category
@@ -482,7 +482,7 @@ namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
 
         private List<string> GetAllCategories()
         {
-            return typeof(PlayerPrefsAPI).GetNestedTypes(BindingFlags.Public | BindingFlags.Static)
+            return typeof(PrefsEngine).GetNestedTypes(BindingFlags.Public | BindingFlags.Static)
                 .Select(t => t.Name)
                 .ToList();
         }
@@ -491,8 +491,8 @@ namespace BlacXGames.PersistSuite.PlayerPrefs.Editor
         {
             var entries = new List<PlayerPrefsEntry>();
             
-            // Get all nested classes in PlayerPrefsAPI (Player, Currency, Setting)
-            var categories = typeof(PlayerPrefsAPI).GetNestedTypes(BindingFlags.Public | BindingFlags.Static);
+            // Get all nested classes in PrefsEngine (Player, Currency, Setting)
+            var categories = typeof(PrefsEngine).GetNestedTypes(BindingFlags.Public | BindingFlags.Static);
             
             foreach (var category in categories)
             {
