@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using BlacXGames.PersistSuite;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DemoScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
