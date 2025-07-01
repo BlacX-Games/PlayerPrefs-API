@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames.PersistSuite
 {
-    public class PlayerPrefsAPI
+    public class PrefsEngine
     {
         public static class Player
         {

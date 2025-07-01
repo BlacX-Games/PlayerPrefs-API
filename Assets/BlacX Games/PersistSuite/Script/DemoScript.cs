@@ -8,7 +8,7 @@ public class DemoScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefsAPI.Player.FullName = "TAIMOOR";
+        PrefsEngine.Player.FullName = "TAIMOOR";
     }
 
     // Update is called once per frame
