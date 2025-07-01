@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using BlacXGames.PersistSuite.PlayerPrefs;
+using BlacXGames.PersistSuite;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour

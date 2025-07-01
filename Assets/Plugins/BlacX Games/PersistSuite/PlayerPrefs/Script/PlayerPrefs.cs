@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace BlacXGames.PersistSuite.PlayerPrefs
+namespace BlacXGames.PersistSuite
 {
     public class PlayerPrefsAPI
     {
