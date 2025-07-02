@@ -208,13 +208,9 @@ namespace BlacXGames.PersistSuite.Editor
             
             EditorGUILayout.BeginHorizontal();
             
-            // Key name (shortened if too long)
-            string displayKey = entry.Key;
-            if (displayKey.Length > 20)
-            {
-                displayKey = displayKey.Substring(0, 17) + "...";
-            }
-            GUILayout.Label(displayKey, GUILayout.Width(150));
+            // Display property name with key as tooltip
+            string displayName = entry.PropertyName;
+            GUILayout.Label(new GUIContent(displayName, entry.Key), GUILayout.Width(150));
             
             // Type
             GUILayout.Label(entry.DataType, GUILayout.Width(70));
