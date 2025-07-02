@@ -159,7 +159,7 @@ namespace BlacXGames.PersistSuite.Editor
                     
                     // Header row
                     EditorGUILayout.BeginHorizontal();
-                    GUILayout.Label("Key", EditorStyles.boldLabel, GUILayout.Width(150));
+                    GUILayout.Label("Property", EditorStyles.boldLabel, GUILayout.Width(150));
                     GUILayout.Label("Type", EditorStyles.boldLabel, GUILayout.Width(70));
                     GUILayout.Label("Value", EditorStyles.boldLabel, GUILayout.Width(200));
                     GUILayout.FlexibleSpace();
